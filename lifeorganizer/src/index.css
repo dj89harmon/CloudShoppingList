@@ -1,0 +1,461 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*, body{
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-wrapper{
+  background: skyblue;
+  position: relative;
+  top: 0;
+}
+
+i{
+  margin-right: 15px;
+}
+
+li{
+  position: relative;
+  text-overflow: ellipsis; /*added 10/9, might not work*/
+}
+
+.red-text, .blue-text{
+  float: right;
+}
+
+i{
+  cursor: pointer;
+}
+
+.notes{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 20vh;
+  height: calc((100vh - 56px) - 75vh);
+  overflow: auto;
+  border: 1px solid black;
+}
+
+#textarea1{
+  height: calc(100% - 35px) !important;
+  padding-top: 5px !important;
+  overflow: auto;
+}
+
+textarea{
+  /* border: 1px solid black !important; */
+  border: none;
+}
+
+textarea.materialize-textarea{
+  border-bottom: none;
+}
+
+textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* applist */
+.applist{
+  position: fixed;
+  width: 70%;
+  max-width: 400px;
+  background: #f89232;
+  border-radius: 8px;
+  padding: 40px 0;
+  margin: 0px auto;
+  padding-bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  z-index: 2;
+}
+
+.applist .collection-item{
+  cursor: pointer;
+  color: rgb(89, 198, 241) !important;
+}
+
+.veil{
+  background: rgba(40, 40, 40, .5);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.kitchenTabs ul{
+  background:skyblue;
+  border: 1px solid #999;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.kitchenTabs ul li{
+  float: left;
+  width: 50%;
+}
+
+.kitchenTabs ul li a{
+  margin: auto;
+  font-size: 0.7em;
+}
+
+.kitchenRow{
+  margin-bottom: 0;
+}
+
+.shoppingListItems{
+  width: 100%;
+  height: calc((100vh - 110px) - 20vh);
+  border: 1px solid #666;
+  font-size: 0.70em;
+  line-height: 1.2;
+  padding: 3px;
+}
+
+#saveShoppingList, #loadShoppingList{
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 0;
+  background: skyblue;
+  color: #333;
+}
+
+.buttoncontainer{
+  width: 45%;
+  margin: 0;
+  float: left;
+}
+
+.recipeInstructions{
+  position: fixed;
+  padding: 5px;
+  height: calc((100vh - 112px) - 50vh);
+  bottom: 65px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0;
+  background: skyblue;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 0.7em;
+}
+
+.recipeInstructions::placeholder{
+  color: #fff;
+}
+
+.btnheight{
+  height: 36px;
+}
+
+.instructionsButtonsContainer{
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.instructionsButtons{
+  display: inline-block;
+  width: 48%;
+}
+
+#expandInstructions, #saveInstructions{
+  width: 60%;
+  text-align: center;
+  background: skyblue;
+  color: #333;
+}
+
+.expansion{
+  padding: 10px;
+  padding-top: 20px;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background: skyblue;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #333;
+  overflow-y: scroll;
+}
+
+.expansion div{
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.recipesUI .span{
+  background: blue !important;
+}
+
+.expansion p{
+  max-width: 100vw;
+}
+
+.expansion span:hover{
+  cursor: pointer;
+}
+
+pre{
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font: inherit;
+}
+
+#newRecipeList{
+  height: calc((100vh - 112px) - 70vh);
+  overflow-y: scroll;
+}
+
+#newRecipeList .collection-item{
+  position: relative;
+}
+
+ul{
+  position: relative;
+}
+
+ul li{
+  position: relative;
+}
+
+.login{
+  margin: 20px;
+}
+
+.loginOption, .registerOption{
+  background: grey;
+  margin: 0 10px;
+}
+
+.loginOption:hover, .registerOption:hover,
+.loginOption:focus, .registerOption:focus{
+  background: skyblue;
+}
+
+#registerButton, #loginButton{
+  margin-top: 20px;
+}
+
+.skyblue{
+  background: skyblue;
+}
+
+.grey{
+  background: grey;
+}
+
+.authOptions .active{
+  background: skyblue;
+}
+
+#loginUser input:focus, #registerUser input:focus{
+  border-bottom: 1px solid skyblue;
+  box-shadow: 0 1px 0 0 skyblue;
+}
+
+#logInButton:hover, #registerButton:hover{
+  background: limegreen;
+}
+
+#loginButton:active, #registerButton:active{
+  background: limegreen;
+}
+
+#loginButton:focus, #registerButton:focus{
+  background: skyblue;
+}
+
+.signOut, .settings{
+  margin:0;
+  font-size: 0.65em;
+  width: 50%;
+  float: left;
+  font-weight: 600;
+  transition: color 0.4s;
+}
+
+.signOut:hover, .settings:hover{
+  cursor: pointer;
+  color: skyblue;
+  transition: color 0.3s;
+}
+
+.messagePopup{
+  width: 40%;
+  max-width: 300px;
+  background: salmon;
+  height: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: fixed;
+  z-index: 3;
+  border-radius: 0 0 10px 10px;
+
+  padding: 20px 15px;
+  text-align: center;
+  padding-top: 10px;
+  top: -200px;
+}
+
+.showMessage{
+  top: 0;
+  transition: top 0.4s;
+}
+
+.flashOut{
+  top: -200px;
+  transition: none;
+}
+
+#todoRow{
+  height: calc((100vh - 56px) - 60vh);
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#completedRow{
+  height: calc((100vh - 56px) - 70vh);
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#new-item input{
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+
+#todoRow .collection .collection-item,
+#completedRow .collection .collection-item,
+#newRecipeList .collection-item {
+  line-height: 0.5rem;
+  padding: 5px 20px;
+}
+
+#todoRow .collection .collection-item span,
+#completedRow .collection .collection-item span,
+#newRecipeList .collection-item span{
+  font-size: 0.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  margin-left: 10px;
+  max-width: 75%;
+  height: 24px;
+  line-height: 1.3em;
+}
+
+#todoRow .collection .collection-item i,
+#completedRow .collection .collection-item i,
+#newRecipeList .collection .collection-item i
+{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#loginUser input, #registerUser input{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  max-width: 400px;
+}
+
+::placeholder{
+  color: rgba(50,50,50,0.5);
+}
+
+.collection .collection-item:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#newRecipeList li:hover{
+  cursor: pointer;
+}
+
+.btn2{
+  float:right;
+}
+
+@media only screen and (max-width: 450px){
+
+  *, body{
+    font-size: 1.04em;
+  }
+
+  .recipeInstructions{
+    height: calc((100vh - 112px) - 50vh);
+  }
+
+  .kitchenTabs .collection{
+    top: 50%;
+    transform: translate(0, -50%);
+    border: none;
+  }
+
+  .collection .shoppingListTab,
+  .collection .recipesTab{
+    line-height: 1.5;
+  }
+
+  h5{
+    font-size: 1.04em;
+  }
+
+  #newRecipeList .collection-item span{
+    margin-left: 0;
+    font-size: 0.6em;
+    overflow: ellipsis;
+    max-width: 60%;
+    line-height: 2.1em;
+  }
+
+  .btn{
+    padding: 0 4px;
+  }
+
+  .btn i{
+    margin-right: 10px;
+  }
+
+  .btn span{
+    font-size: 14px;
+  }
+}
